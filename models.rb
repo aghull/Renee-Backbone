@@ -9,4 +9,8 @@ end
 
 PostResource = Renee.resource {
   backed_by Post
+  allow :index, :get, :create, :delete, :delete_all, :update, :replace
+  attributes :id, :title, :contents
+  respond_with :json
 }
+

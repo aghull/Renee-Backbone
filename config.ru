@@ -6,6 +6,7 @@ $: << root
 require 'renee'
 require 'json'
 require 'models'
+#require 'rack/debug'
 
 run Renee {
 
@@ -19,6 +20,8 @@ run Renee {
   use Rack::Lint
   use Rack::MethodOverride
   use Rack::Static, :urls => ['/css', '/img', '/js'], :root => 'public'
+#  use Rack::Debug
   
   views_path File.expand_path(File.dirname(__FILE__) + "/views")
 }
+

@@ -1,9 +1,10 @@
 $(function() {
 
-  var Post = Backbone.Model.extend({
+  Post = Backbone.Model.extend({
+    urlRoot: '/posts'
   })
 
-  var Posts = Backbone.Collection.extend({
+  Posts = Backbone.Collection.extend({
     model: Post,
     url: '/posts'
   });
